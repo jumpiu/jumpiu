@@ -9,38 +9,54 @@ categories:
 top_img: false
 ---
 
-Welcome to [Hexo](https://hexo.io/)! This is your very first post. Check [documentation](https://hexo.io/docs/) for more info. If you get any problems when using Hexo, you can find the answer in [troubleshooting](https://hexo.io/docs/troubleshooting.html) or you can ask me on [GitHub](https://github.com/hexojs/hexo/issues).
+# [Hexo](https://hexo.io/docs/)
 
-## Quick Start
+> 一个静态博客框架，支持使用[Markdown](https://daringfireball.net/projects/markdown/)编写文章，然后生成静态网站
+> 有很多第三方[主题](https://hexo.io/themes/)可选，也可以自定义主题
+> 支持部署到多种平台，例如：Git、Heroku、Rsync
+> 丰富的[插件](https://hexo.io/plugins/)，例如：hexo-browsersync
 
-### Create a new post
+# Quick Start
 
-``` bash
-$ hexo new "My New Post"
+## 安装依赖
+
+```bash
+brew install git
+brew install node
+brew install yarn
+yarn global add hexo-cli
 ```
 
-More info: [Writing](https://hexo.io/docs/writing.html)
+## 创建博客
 
-### Run server
+```bash
+# 创建项目
+hexo init <folder>
 
-``` bash
-$ hexo server
+# 启动服务, http://localhost:4000
+cd <folder>
+yarn install
+hexo server
+
+# 添加新博客
+hexo new "my-post"
+
+# 编辑内容
+vim source/_posts/my-post.md
 ```
 
-More info: [Server](https://hexo.io/docs/server.html)
+## [部署](https://hexo.io/docs/deployment.html)
 
-### Generate static files
-
-``` bash
-$ hexo generate
+```yaml
+# _config.yml
+deploy:
+  type: git
+  repo: git@github.com:xxx/xxx.git
+  branch: master
+  message: "{{ now('YYYY-MM-DD HH:mm:ss') }}"
 ```
 
-More info: [Generating](https://hexo.io/docs/generating.html)
-
-### Deploy to remote sites
-
-``` bash
-$ hexo deploy
+```bash
+yarn add hexo-deployer-git
+hexo deploy -g
 ```
-
-More info: [Deployment](https://hexo.io/docs/deployment.html)
