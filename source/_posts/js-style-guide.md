@@ -29,8 +29,8 @@ A source file consists of, in order:
 Exactly one blank line separates each section that is present, except the file's implementation, which may be preceded by 1 or 2 blank lines.
 
 # Naming
-  - lowerCamelCase: package, method
-  - UpperCamelCase: class, enum, parameter, field, variable
+  - lowerCamelCase: package, method, parameter, field, variable
+  - UpperCamelCase: class, enum
   - ALL_UPPERCASE: constant
 
 # Formatting
