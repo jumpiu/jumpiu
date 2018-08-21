@@ -12,10 +12,8 @@ categories:
 * mkdir webpack-demo && cd webpack-demo
 * npm init -y   (-y  means skip questionnaire)
 * create index.html, ./src/index.js
-* remove entry in package.json
-
-* use import for 'lodash' instead of <script src=''>, modify index.js,  index.html
-
+* remove main in package.json
+* use import for 'lodash' instead of `<script src='...'>`, modify index.js,  index.html
 * install webpack
     * local install (recommand)
 Installing locally is what we recommend for most projects. This makes it easier to **upgrade projects individually** when breaking changes are introduced. 
@@ -29,7 +27,7 @@ Typically webpack is run via one or more npm scripts which will look for a webpa
 
 * install webpack CLI 
    if install webpack v4 or later, then need to install webpack CLI  (Command Line Interface), you can choose one of the following.
-     * webpcak-cli  -- original full-featured webpack CLI,  ```npm install --save-dev webpack-cli```
+     * webpack-cli  -- original full-featured webpack CLI,  ```npm install --save-dev webpack-cli```
      * webpack-command  -- lightweght CLI, ```npm install --save-dev webpack-command```
 
 ## use webpack
@@ -66,13 +64,8 @@ footer: './src/footer.js',
 ```
 * output
         only one output configration is specified, even though there can be multiple entry points
-    * filename      [name]/[hash]/[chunckhash]/[id].bundle.js  ("/" means "OR")
+    * filename      [name]/[hash]/[chunkhash]/[id].bundle.js  ("/" means "OR")
     * path   need be absolute path
-
-
-
-
-
 
 
 
