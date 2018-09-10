@@ -3,8 +3,7 @@
 ### Install dependencies
 
 ```
-brew install node
-brew install yarn
+brew install node yarn
 ```
 
 ### Initialize project
@@ -26,4 +25,10 @@ git submodule update
 
 ```
 hexo server
+```
+
+### Deploy
+
+```
+bin/deploy.sh
 ```
