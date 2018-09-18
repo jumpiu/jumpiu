@@ -109,7 +109,7 @@ var person2 = createObj(person);
 person1.name = 'person1';
 console.log(person2.name);
 
-person1.firends.push('taylor');
+person1.friends.push('taylor');
 console.log(person2.friends);
 ```
 
