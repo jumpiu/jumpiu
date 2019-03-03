@@ -9,9 +9,9 @@ brew install node yarn
 ### Initialize project
 
 ```
-git clone git@github.com:jumpiu/jumpiu.github.io.git
+git clone git@github.com:wallevy/jumpiu.git
 
-cd jumpiu.github.io
+cd jumpiu
 
 git checkout dev
 

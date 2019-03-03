@@ -13,8 +13,8 @@ timezone: Asia/Shanghai
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: https://jumpiu.github.io
-root: /
+url: https://wallevy.github.io/jumpiu/
+root: /jumpiu/
 permalink: :year/:month/:day/:title/
 permalink_defaults:
 
@@ -85,6 +85,6 @@ theme: melody
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type: git
-  repo: git@github.com:jumpiu/jumpiu.github.io.git
+  repo: git@github.com:wallevy/jumpiu.git
   branch: master
   message: "{{ now('YYYY-MM-DD HH:mm:ss') }}"
