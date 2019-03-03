@@ -1,0 +1,144 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta name="description" content="JS Style Guide"><meta name="keywords" content="js,frontend"><meta name="author" content="Jumpiu,undefined"><meta name="copyright" content="Jumpiu"><title>JS Style Guide | Jumpiu</title><link rel="shortcut icon" href="/jumpiu/imgs/favicon.ico"><link rel="stylesheet" href="/jumpiu/css/index.css?version=1.5.6"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css?version=1.5.6"><link rel="dns-prefetch" href="https://cdn.staticfile.org"><link rel="dns-prefetch" href="https://cdn.bootcss.com"><link rel="dns-prefetch" href="https://creativecommons.org"><script>var GLOBAL_CONFIG = { 
+  root: '/jumpiu/',
+  algolia: undefined,
+  localSearch: undefined,
+  copy: {
+    success: 'Copy successfully',
+    error: 'Copy error',
+    noSupport: 'The browser does not support'
+  }
+} </script></head><body><i class="fa fa-arrow-right" id="toggle-sidebar" aria-hidden="true"></i><div id="sidebar"><div class="toggle-sidebar-info text-center"><span data-toggle="Toggle article">Toggle site</span><hr></div><div class="sidebar-toc"><div class="sidebar-toc__title">Catalog</div><div class="sidebar-toc__progress"><span class="progress-notice">You've read</span><span class="progress-num">0</span><span class="progress-percentage">%</span><div class="sidebar-toc__progress-bar"></div></div><div class="sidebar-toc__content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Source-file-basics"><span class="toc-text">Source file basics</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Source-file-structure"><span class="toc-text">Source file structure</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Naming"><span class="toc-text">Naming</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Formatting"><span class="toc-text">Formatting</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Language-features"><span class="toc-text">Language features</span></a></li></ol></div></div><div class="author-info hide"><div class="author-info__avatar text-center"><img src="/imgs/favicon.ico"></div><div class="author-info__name text-center">Jumpiu</div><div class="author-info__description text-center"></div><hr><div class="author-info-articles"><a class="author-info-articles__archives article-meta" href="/jumpiu/archives"><span class="pull-left">Articles</span><span class="pull-right">10</span></a><a class="author-info-articles__tags article-meta" href="/jumpiu/tags"><span class="pull-left">Tags</span><span class="pull-right">6</span></a><a class="author-info-articles__categories article-meta" href="/jumpiu/categories"><span class="pull-left">Categories</span><span class="pull-right">4</span></a></div></div></div><div id="content-outer"><div class="plain" id="top-container"><div id="page-header"><span class="pull-left"> <a id="site-name" href="/jumpiu/">Jumpiu</a></span><i class="fa fa-bars toggle-menu pull-right" aria-hidden="true"></i><span class="pull-right menus"><a class="site-page" href="/">Home</a><a class="site-page" href="/archives">Archives</a><a class="site-page" href="/categories">Categories</a><a class="site-page" href="/tags">Tags</a></span></div></div><div class="layout" id="content-inner"><article id="post"><div class="article-container" id="post-content"><blockquote>
+<p><a href="https://google.github.io/styleguide/jsguide.html" target="_blank" rel="noopener">Google JavaScript Style Guide</a></p>
+</blockquote>
+<h1 id="Source-file-basics"><a href="#Source-file-basics" class="headerlink" title="Source file basics"></a>Source file basics</h1><ul>
+<li>filename: all lowercase, may include underscores (_) or dashes (-), but no additional punctuation</li>
+<li>encoding: UTF-8</li>
+<li>whitespace: line terminator sequence, space character (0x20)</li>
+</ul>
+<h1 id="Source-file-structure"><a href="#Source-file-structure" class="headerlink" title="Source file structure"></a>Source file structure</h1><p>A source file consists of, in order:</p>
+<ol>
+<li>License or copyright information, if present</li>
+<li>@fileoverview JSDoc, if present</li>
+<li>import module statement</li>
+<li>The file’s implementation</li>
+</ol>
+<p>Exactly one blank line separates each section that is present, except the file’s implementation, which may be preceded by 1 or 2 blank lines.</p>
+<h1 id="Naming"><a href="#Naming" class="headerlink" title="Naming"></a>Naming</h1><ul>
+<li>lowerCamelCase: package, method, parameter, field, variable</li>
+<li>UpperCamelCase: class, enum</li>
+<li>ALL_UPPERCASE: constant</li>
+</ul>
+<h1 id="Formatting"><a href="#Formatting" class="headerlink" title="Formatting"></a>Formatting</h1><ul>
+<li>Block indentation: +2 spaces</li>
+<li><p>Braces</p>
+<ul>
+<li>Braces are used for all control structures</li>
+<li>Exception: <code>if (shortCondition()) return;</code></li>
+<li><p>Nonempty blocks</p>
+<blockquote>
+<p>No line break before the opening brace.<br>Line break after the opening brace.<br>Line break before the closing brace.<br>Line break after the closing brace if that brace terminates a statement or the body of a function or class statement, or a class method. Specifically, there is no line break after the brace if it is followed by else, catch, while, or a comma, semicolon, or right-parenthesis.</p>
+</blockquote>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">method(foo) &#123;</span><br><span class="line">  <span class="keyword">if</span> (condition(foo)) &#123;</span><br><span class="line">    <span class="keyword">try</span> &#123;</span><br><span class="line">      something();</span><br><span class="line">    &#125; <span class="keyword">catch</span> (err) &#123;</span><br><span class="line">      recover();</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Empty blocks</p>
+<blockquote>
+<p>An empty block or block-like construct may be closed immediately after it is opened, with no characters, space, or line break in between (i.e. {}), unless it is a part of a multi-block statement (one that directly contains multiple blocks: if/else or try/catch/finally).</p>
+</blockquote>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">doNothing</span>(<span class="params"></span>) </span>&#123;&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p>Statements</p>
+<ul>
+<li>One statement per line</li>
+<li>Semicolons are required</li>
+<li>Column limit: 80</li>
+</ul>
+</li>
+<li>Whitespace<ul>
+<li>Vertical whitespace<blockquote>
+<p>Between consecutive methods<br>Create logical groupings of statements, blank lines at the start or end of a function body are not allowed</p>
+</blockquote>
+</li>
+<li>Horizontal whitespace<blockquote>
+<p>Separating any reserved word<br>On both sides of any binary or ternary operator<br>After a comma (,) or semicolon (;)<br>After the colon (:) in an object literal.<br>On both sides of the double slash (//) that begins an end-of-line comment</p>
+</blockquote>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="Language-features"><a href="#Language-features" class="headerlink" title="Language features"></a>Language features</h1><ul>
+<li>Use const and let</li>
+<li>One variable per declaration</li>
+<li>Declared when needed, initialized as soon as possible</li>
+<li><p>Array literals</p>
+<ul>
+<li><p>Destructuring</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> [a, b, c, ...rest] = generateResults();</span><br><span class="line"><span class="keyword">let</span> [, b,, d] = someArray;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">optionalDestructuring</span>(<span class="params">[a = <span class="number">4</span>, b = <span class="number">2</span>] = []</span>) </span>&#123; … &#125;;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Spread operator</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[...foo, ...bar]</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p>Object literals</p>
+<ul>
+<li>Use trailing commas</li>
+<li>Do not mix quoted and unquoted keys</li>
+<li>Computed property names <code>{[key]: 42}</code></li>
+<li><p>Method shorthand</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&#123;method() &#123;… &#125;&#125;</span><br><span class="line">&#123;<span class="attr">method</span>: <span class="function"><span class="params">()</span> =&gt;</span> &#123;… &#125;&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Shorthand properties <code>{foo, bar}</code></p>
+</li>
+<li><p>Destructuring</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">destructured</span>(<span class="params">ordinary, &#123;num, str = <span class="string">'some default'</span>&#125; = &#123;&#125;</span>)</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Enums</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> TemperatureScale = &#123;</span><br><span class="line">  CELSIUS: <span class="string">'celsius'</span>,</span><br><span class="line">  FAHRENHEIT: <span class="string">'fahrenheit'</span>,</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p>Class</p>
+<ul>
+<li>Constructors<blockquote>
+<p>Subclass constructors must call super() before setting any fields or otherwise accessing this</p>
+</blockquote>
+</li>
+<li>Fields<blockquote>
+<p>Private fields’ name must start with an underscore</p>
+</blockquote>
+</li>
+<li>Getters and Setters</li>
+<li><p>Interfaces</p>
+<blockquote>
+<p>All non-static method bodies on an interface must be empty blocks. Fields must be defined after the interface body as stubs on the prototype.</p>
+</blockquote>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Something that can frobnicate.</span></span><br><span class="line"><span class="comment"> * @record</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Frobnicator</span> </span>&#123;</span><br><span class="line">  <span class="comment">/**</span></span><br><span class="line"><span class="comment">   * Performs the frobnication according to the given strategy.</span></span><br><span class="line"><span class="comment">   * @param &#123;!FrobnicationStrategy&#125; strategy</span></span><br><span class="line"><span class="comment">   */</span></span><br><span class="line">  frobnicate(strategy) &#123;&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/** @type &#123;number&#125; The number of attempts before giving up. */</span></span><br><span class="line">Frobnicator.prototype.attempts;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p>Function</p>
+<ul>
+<li>Arrow functions</li>
+<li><p>Generators</p>
+<blockquote>
+<p>When defining generator functions, attach the <em> to the function keyword when present, and separate it with a space from the name of the function. When using delegating yields, attach the </em> to the yield keyword.</p>
+</blockquote>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/** @return &#123;!Iterator&lt;number&gt;&#125; */</span></span><br><span class="line"><span class="function"><span class="keyword">function</span>* <span class="title">gen1</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">yield</span> <span class="number">42</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/** @return &#123;!Iterator&lt;number&gt;&#125; */</span></span><br><span class="line"><span class="keyword">const</span> gen2 = <span class="function"><span class="keyword">function</span>*(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">yield</span>* gen1();</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">SomeClass</span> </span>&#123;</span><br><span class="line">  <span class="comment">/** @return &#123;!Iterator&lt;number&gt;&#125; */</span></span><br><span class="line">  * gen() &#123;</span><br><span class="line">    <span class="keyword">yield</span> <span class="number">42</span>;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Parameters</p>
+<ul>
+<li>Default parameters<br><code>function maybeDoSomething(required, optional = &#39;&#39;, node = undefined) {}</code></li>
+<li>Rest parameters<br><code>function variadic(array, ...numbers) {}</code></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>String literals<ul>
+<li>Use single quotes</li>
+<li>Template strings<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">`hello, <span class="subst">$&#123;name&#125;</span>`</span></span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+</ul>
+</div></article><div class="post-meta__tag-list"><a class="post-meta__tags" href="/jumpiu/tags/js/">js</a><a class="post-meta__tags" href="/jumpiu/tags/frontend/">frontend</a></div><nav id="pagination"><div class="prev-post pull-left"><a href="/jumpiu/2018/08/20/webpack-basic/"><i class="fa fa-chevron-left">  </i><span>webpack basic</span></a></div><div class="next-post pull-right"><a href="/jumpiu/2018/08/14/js-basic/"><span>JS 基础</span><i class="fa fa-chevron-right"></i></a></div></nav></div></div><footer><div class="layout" id="footer"><div class="copyright">&copy;2018 - 2019 By Jumpiu</div><div class="framework-info"><span>Driven - </span><a href="http://hexo.io"><span>Hexo</span></a><span class="footer-separator">|</span><span>Theme - </span><a href="https://github.com/Molunerfinn/hexo-theme-melody"><span>Melody</span></a></div></div></footer><i class="fa fa-arrow-up" id="go-up" aria-hidden="true"></i><script src="/jumpiu/js/third-party/anime.min.js"></script><script src="/jumpiu/js/third-party/jquery.min.js"></script><script src="/jumpiu/js/third-party/jquery.fancybox.min.js"></script><script src="/jumpiu/js/third-party/velocity.min.js"></script><script src="/jumpiu/js/third-party/velocity.ui.min.js"></script><script src="/jumpiu/js/utils.js?version=1.5.6"></script><script src="/jumpiu/js/fancybox.js?version=1.5.6"></script><script src="/jumpiu/js/sidebar.js?version=1.5.6"></script><script src="/jumpiu/js/copy.js?version=1.5.6"></script><script src="/jumpiu/js/fireworks.js?version=1.5.6"></script><script src="/jumpiu/js/transition.js?version=1.5.6"></script><script src="/jumpiu/js/scroll.js?version=1.5.6"></script><script src="/jumpiu/js/head.js?version=1.5.6"></script></body></html>
